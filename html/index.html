@@ -1,0 +1,432 @@
+00-p
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+        }
+
+        .inner-wrap {
+            border: 1px solid black;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .inner-wrap .inner-header img {
+            width: 100%;
+            border-radius: 10px;
+            height: 400px;
+        }
+
+        p {
+            color: red;
+        }
+
+        .modal-footer button {
+            width: 47%;
+        }
+
+        .inner-success {
+            background-color: rgb(120, 198, 120);
+            border: 1px solid green;
+        }
+
+        .inner-error {
+            background-color: rgb(232, 123, 123);
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="inner-wrap">
+                    <header class="inner-header">
+                        <img src="../imgs/image.png" alt="">
+                    </header>
+                    <!-- b5-nav-ul -->
+                    <nav class="inner-nav">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#modalId">Trang chu</a>
+                            </li>
+                            <li class="nav-item">
+                                <!--   data-bs-toggle="modal" ( class= modal) || data-bs-target="#myModal" (id = myModal)-->
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalId">Dang
+                                    ky</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tro Giup</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <!-- b5-table = table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Ma Sinh Vien</th>
+                                <th scope="col">Ho Ten</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Tien dich vu</th>
+                                <th scope="col">Tien do dung</th>
+                                <th scope="col">Tong tien</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>1234567890</td>
+                                <td>thanhtung</td>
+                                <td>thanhtung@iuh.edu.vn</td>
+                                <td>10000</td>
+                                <td>20000</td>
+                                <td>30000</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- bs5-modal-grid = modal -->
+
+
+                    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitleId">
+                                        Modal title
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <form action="" class="form-group">
+                                            <div class="inner-box row mb-3">
+                                                <label for="id" class="col-3">Ma hoc vien:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <input type="text" placeholder="123456789" id="id"
+                                                        class="form-control">
+
+                                                </div>
+                                                <div class="inner-result col-3">
+                                                    <p class="result_id">*</p>
+                                                </div>
+                                            </div>
+                                            <div class="inner-box row  mb-3">
+                                                <label for="name" class="col-3">Ho ten:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <input type="text" placeholder="Tran Thu Trang" id="name"
+                                                        class="form-control">
+
+                                                </div>
+                                                <div class="inner-result col-3">
+                                                    <p class="result_name">*</p>
+                                                </div>
+                                            </div>
+                                            <div class="inner-box row  mb-3">
+                                                <label for="email" class="col-3">Ho ten:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <input type="text" placeholder="trangran@iuh.edu.vn" id="email"
+                                                        class="form-control">
+
+                                                </div>
+                                                <div class="inner-result col-3">
+                                                    <p class="result_email">*</p>
+                                                </div>
+                                            </div>
+                                            <div class="inner-box row  mb-3">
+                                                <label for="service" class="col-3">Dich vu:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <select name="service" id="service" class="form-control">
+                                                        <option value="boi">Boi</option>
+                                                        <option value="chay">Chay</option>
+                                                        <option value="daBanh">Da Banh</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+                                            <!-- disabled: ko cho nhap -->
+                                            <div class="inner-box row  mb-3">
+                                                <label for="price" class="col-3">Gia tien:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <input type="text" disabled id="price" class="form-control">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="inner-box row  mb-3">
+                                                <label for="doDung" class="col-3">Do dung:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <input type="checkbox" name="doDung" id="aoQuanBoi">
+                                                    <label for="aoQuanBoi">Ao Quan Boi</label> <br>
+                                                    <input type="checkbox" name="doDung" id="phao">
+                                                    <label for="phao">Phao</label> <br>
+                                                    <input type="checkbox" name="doDung" id="kinhBoi">
+                                                    <label for="kinhBoi">Kinh Boi</label>
+
+                                                </div>
+
+                                            </div>
+                                            <!-- disabled: ko cho nhap -->
+                                            <div class="inner-box row  mb-3">
+                                                <label for="tienDoDung" class="col-3">Tien do dung:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <input type="text" disabled id="tienDoDung" placeholder="0"
+                                                        class="form-control">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="inner-box row  mb-3">
+                                                <label for="total" class="col-3">Total:</label>
+                                                <div class="inner-input col-6 ">
+                                                    <input type="text" disabled id="total" class="form-control">
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="inner-content row">
+                                                <div class="content col-4">Ma SV:______________</div>
+                                                <div class="content col-4">Ho Ten:______________</div>
+                                                <div class="content col-4">Phong Thi:______________</div>
+                                            </div>
+
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Thanh
+                                        toan</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                        Huy
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+
+
+
+
+    <script>
+        let isAvaiable = true;
+
+        // Mã học viên 
+        let id = document.querySelector("#id");
+        id.addEventListener("blur", () => {
+            let idPattern = /^04[0-9]{8}$/;
+            let idInput = id.value.trim();
+            let result_id = document.querySelector(".result_id");
+
+            if (idInput === "") {
+                result_id.innerHTML = "Không được bỏ trống !";
+                result_id.style.color = "red";
+                id.classList.add("inner-error");
+                id.classList.remove("inner-success");
+                isAvaiable = false;
+
+
+            } else if (!idPattern.test(idInput)) {
+                result_id.innerHTML = "Lỗi !";
+                result_id.style.color = "red";
+                id.classList.add("inner-error");
+                id.classList.remove("inner-success");
+                isAvaiable = false;
+            } else {
+                result_id.innerHTML = "(*)";
+                result_id.style.color = "green";
+                id.classList.remove("inner-error");
+                id.classList.add("inner-success");
+                isAvaiable = true;
+            }
+
+        })
+        Name
+        let name = document.querySelector("#name");
+        name.addEventListener("blur", () => {
+            let namePattern = /^[A-Z][a-z]+(\s[A-Z][a-z]+)*$/;
+            let nameInput = name.value.trim();
+            let result_name = document.querySelector(".result_name");
+
+            if (nameInput === "") {
+                result_name.innerHTML = "Không được bỏ trống !";
+                result_name.style.color = "red";
+                name.classList.add("inner-error");
+                name.classList.remove("inner-success");
+                isAvaiable = false;
+
+
+            } else if (!namePattern.test(nameInput)) {
+                result_name.innerHTML = "Lỗi !";
+                result_name.style.color = "red";
+                name.classList.add("inner-error");
+                name.classList.remove("inner-success");
+                isAvaiable = false;
+            } else {
+                result_name.innerHTML = "(*)";
+                result_name.style.color = "green";
+                name.classList.remove("inner-error");
+                name.classList.add("inner-success");
+                isAvaiable = true;
+            }
+
+        })
+        // Email
+        let email = document.querySelector("#email");
+        email.addEventListener("blur", () => {
+            let emailPattern = /^[A-Za-z0-9]+@iuh\.edu\.vn$/;
+            let emailInput = email.value.trim();
+            let result_email = document.querySelector(".result_email");
+
+            if (emailInput === "") {
+                result_email.innerHTML = "Không được bỏ trống !";
+                result_email.style.color = "red";
+                email.classList.add("inner-error");
+                email.classList.remove("inner-success");
+                isAvaiable = false;
+
+
+            } else if (!emailPattern.test(emailInput)) {
+                result_email.innerHTML = "Lỗi !";
+                result_email.style.color = "red";
+                email.classList.add("inner-error");
+                email.classList.remove("inner-success");
+                isAvaiable = false;
+            } else {
+                result_email.innerHTML = "(*)";
+                result_email.style.color = "green";
+                email.classList.remove("inner-error");
+                email.classList.add("inner-success");
+                isAvaiable = true;
+            }
+
+        })
+        // Dịch vụ
+        let price = document.querySelector("#price");
+        let service = document.querySelector("#service");
+
+        function Price() {
+            let serviceValue = service.value.trim();
+            if (serviceValue === 'boi') {
+                price.value = 20000;
+            } else if (serviceValue === 'chay') {
+                price.value = 10000;
+            } else {
+                price.value = 25000;
+            }
+            Total();
+        }
+
+        service.addEventListener("change", Price);
+
+        // Đồ dùng
+        const giaDoDung = {
+            aoQuanBoi: 10000,
+            phao: 410000,
+            kinhBoi: 230000
+        };
+
+        const checkboxes = document.querySelectorAll("input[name='doDung']");
+        const tienDoDung = document.getElementById("tienDoDung");
+
+        function tinhTongGiaDoDung() {
+            let tongGia = 0;
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    tongGia += giaDoDung[checkbox.id];
+                }
+            });
+            tienDoDung.value = tongGia;
+            Total();
+        }
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', tinhTongGiaDoDung);
+        });
+
+        // Tính tổng
+        let total = document.querySelector("#total");
+
+        function Total() {
+            const priCe = parseInt(price.value) || 0;
+            const TienDoDung = parseInt(tienDoDung.value) || 0;
+            total.value = priCe + TienDoDung;
+        }
+
+        // Khởi tạo giá trị ban đầu cho tổng
+        Price();
+        tinhTongGiaDoDung();
+
+        let btnSubmit = document.querySelector("#btnSubmit");
+        btnSubmit.addEventListener("click", () => {
+            const nameValue = document.querySelector("#name").value.trim();
+            const emailValue = document.querySelector("#email").value.trim();
+            const idValue = document.querySelector("#id").value.trim();
+            const priceValue = document.querySelector("#price").value.trim();
+            const quantityValue = tienDoDung.value.trim();
+            const totalValue = total.value.trim();
+
+            let tableBody = document.querySelector(".tableBody");
+            let countRow = tableBody.querySelectorAll("tr").length + 1;
+
+            // Chỉ cho phép thêm vào bảng nếu tất cả các trường hợp lệ
+            if (nameValue && emailValue && idValue && priceValue && quantityValue && totalValue && isAvaiable) {
+                let newRow = `
+            <tr>
+                <th scope="row">${countRow}</th>
+                <td>${idValue}</td>
+                <td>${nameValue}</td>
+                <td>${emailValue}</td>
+                <td>${priceValue}</td>
+                <td>${quantityValue}</td>
+                <td>${totalValue}</td>
+            </tr>
+        `;
+                tableBody.innerHTML += newRow;
+                alert("Thành công!");
+            } else {
+                alert("Thất bại! Vui lòng điền đầy đủ thông tin.");
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
